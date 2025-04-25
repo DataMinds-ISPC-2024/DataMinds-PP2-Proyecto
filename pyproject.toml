@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DataMinds-PP2-Proyecto"
+version = "0.1.0"
+authors = [{DataMinds = "autor1", email = "giordia.tscdia@gmail.com"}]
+description = "Precios de la vivienda: técnicas avanzadas de regresión"
+requires-python = ">3.8"
+dependencies = [
+    "numpy",
+    "pandas"
+]
+
+[tool.setuptools.packages.find]
+where = ["src/"]
