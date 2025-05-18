@@ -87,7 +87,7 @@ print(f"Testing data shape: {test_data.shape}")`
 
 ## Referencias a rutas o bases de datos origen y destino
 
-- [ ] Especificar las rutas o bases de datos de origen y destino para los datos.
+Especificamos las rutas o bases de datos de origen únicamente, porque las de destino de los datos `no se implementó aun`.
 
 ### Rutas de origen de datos
 
@@ -112,7 +112,7 @@ print(f"Testing data shape: {test_data.shape}")`
 ### Base de datos de destino
 
 - [ ] **Base de datos de destino**:
-  Para fines de análisis y modelado, no es estrictamente necesario cargar los datos en una base de datos relacional por tal motivo no se implementó aun. Sin embargo, si se desea utilizar una base de datos SQL o similar, se puede optar por almacenar los datos en una base de datos **MySQL**, **PostgreSQL**, **SQLite**, o incluso en una base de datos NoSQL como **MongoDB** si fuera necesario para escalabilidad.
+  Para fines de análisis y modelado, no es estrictamente necesario cargar los datos en una base de datos relacional por tal motivo `no se implementó aun`. Sin embargo, si se desea utilizar una base de datos SQL o similar, se puede optar por almacenar los datos en una base de datos **MySQL**, **PostgreSQL**, **SQLite**, o incluso en una base de datos NoSQL como **MongoDB** si fuera necesario para escalabilidad.
 
 - [ ] **Estructura de la base de datos de destino**:
   La base de datos de destino debe reflejar la estructura de los datos originales en el archivo CSV. Para almacenar estos datos en una tabla, se debe crear una tabla con columnas que coincidan con las variables del conjunto de datos. Cada columna en el archivo CSV se mapea a una columna en la tabla SQL:
