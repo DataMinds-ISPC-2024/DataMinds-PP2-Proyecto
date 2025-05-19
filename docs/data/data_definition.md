@@ -93,20 +93,30 @@ Especificamos las rutas o bases de datos de origen únicamente, porque las de de
 
 - [ ] **Ubicación de los archivos de origen**:
   Los archivos de datos de origen se encuentran localmente en la máquina después de ser descargados de Kaggle. Las rutas típicas a los archivos descargados son:
+
   - **Ruta local**: `C:/Users/Usuario/Downloads/house-prices-advanced-regression-techniques/train.csv`
-  - O si se está trabajando en un entorno como Google Colab, se puede cargar desde Google Drive o una URL pública.
+    
+  - O si se está trabajando en un entorno como Google Colab, se puede cargar desde URL de la organización DataMinds-ISPC-2024:
+    - url_train = `'https://raw.githubusercontent.com/DataMinds-ISPC-2024/DataMinds-PP2-Proyecto/93777d37ba8fd3026305262171b0ff95034c9796/docs/data/house-prices-advanced-regression-techniques/train.csv'`
+      
+    - url_test = `'https://raw.githubusercontent.com/DataMinds-ISPC-2024/DataMinds-PP2-Proyecto/93777d37ba8fd3026305262171b0ff95034c9796/docs/data/house-prices-advanced-regression-techniques/test.csv'`
     
 - [ ] **Estructura de los archivos de origen**:
   Los archivos de datos descargados de Kaggle se encuentran en formato **CSV**. En el caso del archivo `train.csv`, la estructura típica es:
+
   - **Columnas**: Variables relacionadas con las características de las viviendas, como el número de habitaciones, el tamaño del lote, el año de construcción, la ubicación (vecindario), el precio de venta (variable dependiente), entre otras.
+    
   - **Ejemplo de columnas**: `Id`, `MSSubClass`, `LotFrontage`, `LotArea`, `OverallQual`, `YearBuilt`, `ExterCond`, `BsmtQual`, `GrLivArea`, `SalePrice`, etc.
   
   En términos generales, cada fila del archivo CSV representa una vivienda y sus respectivas características, mientras que la última columna `SalePrice` es la variable objetivo que se busca predecir.
 
 - [ ] **Procedimientos de transformación y limpieza de los datos**:
   - **Manejo de valores faltantes**: Se identifican y manejan los valores faltantes mediante imputación o eliminación de filas/columnas, según corresponda.
+    
   - **Eliminación de columnas irrelevantes**: Algunas columnas pueden ser innecesarias para el análisis, como el `Id` que es solo un identificador único de cada vivienda.
+    
   - **Conversión de tipos de datos**: Se asegura de que las columnas numéricas se manejen correctamente como variables continuas, mientras que las variables categóricas se convierten en tipos adecuados para su análisis (por ejemplo, `One-Hot Encoding` para las variables categóricas).
+    
   - **Detección de valores atípicos**: Los valores extremos (outliers) en las variables continuas pueden ser tratados, ya sea recortándolos o transformándolos.
 
 ### Base de datos de destino
@@ -120,4 +130,5 @@ Especificamos las rutas o bases de datos de origen únicamente, porque las de de
       
 - [ ] **Procedimientos de carga y transformación de los datos en la base de datos de destino**:
   - **Carga**: Usariamos un script Python con `Pandas` y `SQLAlchemy` o `mysql.connector` para cargar los datos en la base de datos de destino.
+    
   - **Transformación**: Durante la carga de los datos en la base de datos, se podrían realizar transformaciones adicionales, como la conversión de tipos de datos, creación de índices, normalización de ciertas columnas, o particionado de tablas si los datos se almacenan en una base de datos relacional de gran tamaño.
