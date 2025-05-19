@@ -140,3 +140,5 @@ Una matriz de correlación muestra la relación entre las variables numéricas y
 
 #### **Diagrama de dispersión de `GrLivArea` vs `SalePrice`**:
 Este gráfico muestra claramente que, en general, las viviendas con mayor área sobre el nivel del suelo tienden a tener un precio más alto.
+
+    `(Colocar la ImAGEN)`
